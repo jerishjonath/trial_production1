@@ -74,7 +74,7 @@ const Pricing = ({ type }) => {
         <div className='LottieAnimation1'>
         <Lottie 
           options={defaultOptions}
-          height={700}px
+          height={600}px
           width={600}
         />
       </div>
