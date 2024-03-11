@@ -1,3 +1,4 @@
+"use client"
 import $ from 'jquery'; // Import jQuery
 
 // Copy your JavaScript code here
