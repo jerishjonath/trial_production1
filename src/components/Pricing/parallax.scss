@@ -1,0 +1,121 @@
+@import '/src/styles/index.scss';
+
+.LottieAnimation1{
+  position: relative;
+  top: 500px;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  
+      @include mobile{
+        height: 20px !important;
+        position: relative;
+        top: 490px;
+        right: 55px;
+        align-self: center;
+        align-content: center;
+        align-items: center; 
+      }
+  }
+
+
+.parallax{
+  width:  100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+    
+  .maintitle{
+    font-size: 6.5vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    position: relative;
+    margin-bottom: 400px;
+
+    @include mobile{
+      font-size: 45px;
+      z-index: 3;
+      align-items: center;
+    }
+
+    .maintitle2{
+      font-size: 7vw;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      position: relative;
+      margin-bottom: 400px;
+      background: linear-gradient(45deg, #0004ff, #7bff00, #ea00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s infinite linear;
+      align-items: center;
+
+      @include mobile{
+        font-size: 50px;
+        align-items: center;
+      }
+    }
+    @keyframes shine {
+      0% {
+        background-position: 0;
+     }
+      60% {
+        background-position: 600px;
+     }
+      100% {
+        background-position: 600px;
+     }
+    }
+  }
+
+    
+  .mountains{
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+
+    @include mobile{
+      overflow: hidden;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .planets{
+    background-size: 200vw;
+    margin-top: 25vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-bottom: 400px;
+    z-index: 2;
+    // overflow: hidden;
+
+    @include mobile{
+      background-size:970px;
+      margin-bottom:800px;
+      background-repeat: no-repeat;
+
+    }
+      
+  }
+  .stars{
+    
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+}
+
