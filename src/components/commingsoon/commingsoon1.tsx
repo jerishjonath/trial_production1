@@ -59,7 +59,8 @@ $(function () {
   }
 
   function collapseForm() {
-    if (email_inp.val().trim().length > 0) return false;
+    console.log(email_inp.val()); // Log the value of email_inp.val()
+    if (email_inp.val() && email_inp.val().trim().length > 0) return false;
     else {
       hideInputForm();
       ntf_btn.addClass("inactive");
@@ -69,6 +70,7 @@ $(function () {
       }, 100);
     }
   }
+  
 
   ntf_btn.click(function () {
     ntf_area.addClass("active");
