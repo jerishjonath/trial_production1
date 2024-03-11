@@ -10,7 +10,7 @@ import Pricing from "@/components/Pricing/index";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
-import Image from "next/image";
+
 
 
 
