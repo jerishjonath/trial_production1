@@ -14,7 +14,7 @@ const ParticlesN = () => {
             },
             fpslimit:120,
             particles: {
-              number: { value: 20, density: { enable: false, value_area: 800 } },
+              number: { value: 10, density: { enable: false, value_area: 200 } },
               color: { value: "#ffffff" },
               shape: {
                 type: "star",
@@ -58,7 +58,7 @@ const ParticlesN = () => {
             interactivity: {
               detect_on: "window",
               events: {
-                onhover: { enable: true, mode: "grab" },
+                onhover: { enable: true, mode: "push" },
                 onclick: { enable: true, mode: "" },
                 resize: true
               },

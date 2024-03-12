@@ -41,15 +41,15 @@ const Commingsoon = () => {
           </div>
           <div className="w-full px-4 lg:w-1/2">
             <div className="max-w-[470px]">
-              <div className="mb-9">
-                <h3 className="mb-4 text-4xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  We are almost there
-                </h3>
-                <p className=" text-3xl font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Stay tuned for something amazing..
-                </p>
-              </div>
-              <FlipClockCountdown to={new Date().getTime() + 6 * 24 * 3600 * 1000 + 5000} className='flip-clock'/>
+                <div className="flex flex-col items-center justify-center">
+                  <h3 className="mb-4 text-4xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl text-center">
+                    We are almost there
+                  </h3>
+                  <p className="mb-4 text-3xl font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed text-center">
+                    Stay tuned for something amazing..
+                  </p>
+                  <FlipClockCountdown to={new Date().getTime() + 6 * 24 * 3600 * 1000 + 5000} className='flip-clock'/>
+                </div>
     <div id="cover">
       <div id="ntf-area">
         <div id="ntf-btn">Notify me</div>

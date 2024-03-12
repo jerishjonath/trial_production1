@@ -27,6 +27,7 @@ export default function Home() {
       <ScrollUp />
       <Pricing type={undefined} />
       <Hero />
+      
      {/* <Features />  */}
       {/* <Video /> */}
       {/* <Brands /> */}

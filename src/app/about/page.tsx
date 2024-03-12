@@ -15,7 +15,7 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Our mission is to revolutionize digital marketing and website creation by providing cutting-edge strategies and design that propel businesses to new heights of success. Through innovative techniques and a deep understanding of the digital landscape, we help brands dominate their markets, achieve unprecedented growth, and create stunning websites that reflect their unique identities."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

@@ -2,10 +2,21 @@
 import Link from "next/link";
 import { useEffect, useRef } from 'react';
 import 'src/styles/index.scss';
-import LottieAnimation from '../lotties/lottieanimation'
 import "./hero.scss"
+import Lottie from 'react-lottie';
+import animationData from './Animation1.json'; // Path to your Lottie animation file
 
 const Hero = () => {
+
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
 
   const txtsRef = useRef(null);
 
@@ -52,12 +63,18 @@ const Hero = () => {
 >
   <div className="containerhero flex flex-wrap">
     <div className="w-full md:w-1/2 px-4">
-      <LottieAnimation />  
+    <div className='LottieAnimation2'>
+        <Lottie 
+          options={defaultOptions}
+          loop={true}
+          autoplay={true}
+        />
+      </div>
     </div>
     <div className="w-full md:w-1/2 px-4">
       <div className="herotext mx-auto max-w-[800px] text-center">
         <h1 className="special-heading mb-12 overflow-hidden animate-text !leading-relaxed text-body-color dark:text-body-color-dark text-4xl font-bold sm:text-8xl sm:leading-tight md:text-6xl md:leading-tight">
-          "YOUR DIGITAL PARTNER"
+          YOUR DIGITAL PARTNER
         </h1>
         <div className="home-text relative z-20">
           <p

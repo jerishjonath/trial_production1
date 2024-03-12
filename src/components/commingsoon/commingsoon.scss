@@ -1,7 +1,7 @@
 .flip-clock {
   --fcc-flip-duration: 0.5s; /* transition duration when flip card */
-  --fcc-digit-block-width: 40px; /* width of digit card */
-  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 50px; /* height of digit card, highly recommend in even number */
   --fcc-digit-font-size: 30px; /* font size of digit */
   --fcc-digit-color: white; /* color of digit */
   --fcc-label-font-size: 20px; /* font size of label */
@@ -156,4 +156,54 @@
 
 #f-msg.active {
   transform: scale(1);
+}
+
+#cover {
+  align-content: center;
+  max-width: 400px;
+  margin: 90px auto;
+  outline: none;
+}
+
+#ntf-area {
+  width: 100%;
+  max-width: 400px; /* Set the maximum width for larger screens */
+  margin: 0 auto;
+  background-color: #5d5858;
+  border-radius: 40px;
+  transition: 0.5s cubic-bezier(0, 1.28, 0.29, 1.18) width;
+  outline: none;
+
+  @media (max-width: 768px) {
+    max-width: 300px; /* Adjust width for medium screens */
+  }
+
+  @media (max-width: 480px) {
+    max-width: 200px; /* Adjust width for small screens */
+  }
+}
+
+#submit-btn {
+  color: #4ec0ee;
+  padding: 13px;
+  background-color: #2d8fb6;
+  border-radius: 40px;
+  transform: scale(0);
+  transition: 0.4s cubic-bezier(0, 0.73, 0.35, 1.22) transform, 0.2s ease color;
+  outline: none;
+  font-size: 16px; /* Set base font size */
+  font-weight: bold;
+  line-height: 1;
+  border: 0;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 20px; /* Adjust padding for medium screens */
+    font-size: 14px; /* Adjust font size for medium screens */
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px; /* Adjust padding for small screens */
+    font-size: 12px; /* Adjust font size for small screens */
+  }
 }

@@ -31,7 +31,7 @@ const Pricing = ({ type }) => {
   };
   // Choose the planets image based on the theme
   const planetsImage = theme === 'dark' ? '/images/parallax/planets-dark.png' : '/images/parallax/sun1.png';
-  const particletheme = theme === 'dark' ? (<ParticlesN/>) : (<ParticlesM/>);
+  const particletheme = theme === 'dark' ? (<ParticlesN/>) : "";
   const starsImage = theme === 'dark' ? '/images/parallax/stars.png' :"/images/parallax/stars.png";
 
   const Mountain =  '/images/parallax/mountains.png'; 
@@ -65,7 +65,7 @@ const Pricing = ({ type }) => {
          
 
         {particletheme}
-        <motion.h1 style={{ y: ytext }} className='maintitle'>NOOBIKIDS <span className='maintitle2'>DIGITAL</span></motion.h1>
+        <motion.h1 style={{ y: ytext }} className='maintitle'>NOOBIEKID <span className='maintitle2'>DIGITAL</span></motion.h1>
         <motion.div
         style={{
           backgroundImage: `url(${Mountain})`,
@@ -74,11 +74,10 @@ const Pricing = ({ type }) => {
         <div className='LottieAnimation1'>
         <Lottie 
           options={defaultOptions}
-          height={600}px
-          width={600}
+          loop={true}
+          autoplay={true}
         />
       </div>
-
         </motion.div>
 
         

@@ -1,22 +1,24 @@
 @import '/src/styles/index.scss';
 
-.LottieAnimation1{
-  position: relative;
-  top: 500px;
-  align-self: center;
-  align-content: center;
-  align-items: center;
-  
-      @include mobile{
-        // height: 20px !important;
-        position: relative;
-        top: 435px;
-        right: 90px;
-        align-self: center;
-        align-content: center;
-        align-items: center; 
-      }
+.LottieAnimation1 {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 850px; /* Set the desired width */
+  height: 850px;
+}
+
+@include mobile {
+  .LottieAnimation1 {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px; /* Set the desired width */
+    height: 500px;
   }
+}
 
 
 .parallax{
@@ -100,7 +102,7 @@
 
     @include mobile{
       background-size:800px;
-      margin-bottom:700px;
+      margin-bottom:200px;
       background-repeat: no-repeat;
 
     }
