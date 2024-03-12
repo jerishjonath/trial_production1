@@ -9,6 +9,7 @@ import Hero from "@/components/Hero/index";
 import Pricing from "@/components/Pricing/index";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
+import Commingsoon from "@/components/commingsoon/commingsoon";
 import { Metadata } from "next";
 
 
@@ -27,12 +28,14 @@ export default function Home() {
       <ScrollUp />
       <Pricing type={undefined} />
       <Hero />
+      <AboutSectionOne />
+      {/* <AboutSectionTwo /> */}
+      <Commingsoon/>
       
      {/* <Features />  */}
       {/* <Video /> */}
       {/* <Brands /> */}
-      {/* <AboutSectionOne /> */}
-      {/* <AboutSectionTwo /> */}
+
       {/* <Testimonials /> */}
       {/* <Blog /> */}
       {/* <Contact />  */}

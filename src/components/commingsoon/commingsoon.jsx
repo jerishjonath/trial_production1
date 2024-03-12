@@ -5,7 +5,7 @@ import animationData from './underconstruction.json'; // Path to your Lottie ani
 import FlipClockCountdown from '@leenguyen/react-flip-clock-countdown';
 import '@leenguyen/react-flip-clock-countdown/dist/index.css';
 import "src/components/commingsoon/commingsoon.scss"
-import "./commingsoon1"
+
 
 
 
@@ -19,6 +19,23 @@ const Commingsoon = () => {
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
+  };
+  const [subscribed, setSubscribed] = useState(false);
+  const [formData, setFormData] = useState({ name: '', email: '' });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Perform form submission logic here
+    // For now, just simulate a successful submission
+    setSubscribed(true);
   };
 
 
@@ -50,20 +67,41 @@ const Commingsoon = () => {
                   </p>
                   <FlipClockCountdown to={new Date().getTime() + 6 * 24 * 3600 * 1000 + 5000} className='flip-clock'/>
                 </div>
-    <div id="cover">
-      <div id="ntf-area">
-        <div id="ntf-btn">Notify me</div>
-        <div id="ntf-form-cover">
-          <form method="post" className="tb" autoComplete="off">
-            <div className="td" id="td-inp">
-              <input type="email" name="email" id="email-inp" placeholder="Your email address" spellCheck="false" required />
-            </div>
-            <div className="td" id="td-pre"><button type="submit" id="submit-btn" disabled>Send</button></div>
-          </form>
-        </div>
-        <div id="f-msg">Thank you!</div>
-      </div>
+                <div className="relative z-10 rounded-sm bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+                  <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
+                    Notifyme
+                  </h3>
+                  <div>
+      {!subscribed ? (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <input
+            type="submit"
+            value="Subscribe"
+            className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
+          />
+        </form>
+      ) : (
+        <p>Thank you for subscribing, {formData.name}!</p>
+      )}
     </div>
+    
+                </div>
               {/* <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
                   Premier support

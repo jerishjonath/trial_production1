@@ -14,11 +14,11 @@ const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
-        description="Our mission is to revolutionize digital marketing and website creation by providing cutting-edge strategies and design that propel businesses to new heights of success. Through innovative techniques and a deep understanding of the digital landscape, we help brands dominate their markets, achieve unprecedented growth, and create stunning websites that reflect their unique identities."
+        pageName="About"
+        description=""
       />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      {/* <AboutSectionTwo /> */}
     </>
   );
 };

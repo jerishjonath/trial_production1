@@ -21,8 +21,7 @@ const Blog = () => {
 
       <section className="pb-[120px] pt-[120px]">
         <div className="container">
-        <Commingsoon/>
-          {/* <div className="-mx-4 flex flex-wrap justify-center">
+          <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
               <div
                 key={blog.id}
@@ -91,7 +90,7 @@ const Blog = () => {
                 </li>
               </ul>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </>
